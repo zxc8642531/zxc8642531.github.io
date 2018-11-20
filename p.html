@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="p.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    <style>
+        .imgrl{
+            border:10px solid white;
+        }
+
+
+        #dom1dom{
+            background-attachment: fixed;
+            background-image: url(rain-nature-animated-gif-19.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        body::-webkit-scrollbar{
+            display: none;
+        }
+
+        #top {
+            background-color: rgba(0, 0, 0, 0.527);
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 75px;
+            height: 75px;
+            text-align: center;
+            line-height: 65px;
+            text-decoration: none;
+            z-index: 999;
+            color:rgb(255, 255, 255);
+            border-radius: 30px;
+            border-top: 4px solid rgb(85, 102, 255);
+            border-bottom: 4px solid rgb(85, 102, 255);
+            border-left: 8px solid rgb(0, 0, 0,.5);
+            border-right: 8px solid rgb(0, 0, 0,.5);
+            display: none;
+            font-family: "微軟正黑體";
+        }
+
+        #top:active{
+            
+        }
+
+        @keyframes qq {
+            form {transform: rotate(0deg)}
+            to {transform: rotate(360deg)}
+        }
+    </style>
+
+    <script>
+
+        $(function(){
+            //一樣意思
+            $("nav a").click(function(){
+            //$("nav").find("a").click(function(){
+                let target = $(this).data("haha");
+                let topOffset = $(target).offset().top;
+                console.log(topOffset);
+                $("html,body").animate({
+                    scrollTop: topOffset
+                })
+            })
+
+            $("#top").click(function(){
+                $("html,body").animate({
+                    scrollTop:0},
+                    {duration: 1000,
+                })
+            })
+            
+            let hhh =document.getElementById("top");
+
+            $(window).scroll(function(){
+                let h = $("html,body").scrollTop();
+                console.log(h);
+                if(h>300){
+                    // $("#top").fadeIn();
+                    $("#top").show().removeClass().addClass("animated bounceInDown");
+                }else{
+                    // $("#top").fadeOut();
+                    $("#top").removeClass().addClass("animated bounceOutUp");
+                }
+            });
+        })
+
+
+    </script>
+
+</head>
+    <body>
+
+        <!-- 跳回頂部 -->
+        <a href="javascript:;" id="top">Top</a>
+
+        <!-- 首bar -->
+        <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+            <div class="container">
+            <a href="#" class="navbar-brand">LOGO</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navi">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item"><a href="#" class="nav-link">LINK</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">LINK</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">LINK</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">LINK</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">LINK</a></li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+
+        <!-- 輪播 -->
+        <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img class="d-block w-100" src="photo-1540753421673-74b8716d78ef.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block pb-5">
+                        <h1 class="display-1">TITLE</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit fugiat totam recusandae.  fugit velit magnam mollitia inventore quod quisquam possimus?</p>
+                        <a class="btn btn-success">Read More</a>
+                    </div>
+                </div>
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="photo-1542142860-60fbdf26b2d7.jpg " alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block pb-5">
+                        <h1 class="display-1">TITLE</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit fugiat totam recusandae.  fugit velit magnam mollitia inventore quod quisquam possimus?</p>
+                        <a class="btn btn-success">Read More</a>
+                    </div>
+                </div>
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="photo-1542125879-d1eecbfc88bc.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block pb-5 text-light">
+                        <h1 class="display-1">TITLE</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit fugiat totam recusandae.  fugit velit magnam mollitia inventore quod quisquam possimus?</p>
+                        <a class="btn btn-success">Read More</a>
+                    </div>
+                </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <!-- 三欄式 -->
+        <div class="container-fluid bg-dark text-white p-5 border border-outset border border-white">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>TITLE</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa similique id corrupti minus a inventore cum, laboriosam ipsa. Animi quae deserunt sint quo amet modi. Ea cupiditate eum hic unde!
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h2>TITLE</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa similique id corrupti minus a inventore cum, laboriosam ipsa. Animi quae deserunt sint quo amet modi. Ea cupiditate eum hic unde!
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h2>TITLE</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa similique id corrupti minus a inventore cum, laboriosam ipsa. Animi quae deserunt sint quo amet modi. Ea cupiditate eum hic unde!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 註冊列 -->
+        <div class="container-fluid bg-dark text-white border border-outset border border-white">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-sm-12">
+                    <p class="m-0 p-5">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptate architecto eveniet minima animi explicabo incidunt blanditiis voluptatum, unde placeat ex sed totam dolores distinctio error sit nemo nisi doloremque. 
+                    </p>
+                </div>
+                <div class="col-lg-4 col-sm-12 text-center ">
+                    <button class="btn btn-primary col-sm-12 col-lg-4">SIGN UP</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 左圖右字 -->
+        <div class="container-fluid" id="dom1dom">
+            <div class="row text-center align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://source.unsplash.com/random/250x350?sig=2" alt="" class="p-3 rounded-circle imgrl">
+                </div>
+                <div class="col-lg-6 pb-5">
+                    <p class="text-light p-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam autem quisquam consequuntur odit eius, porro corporis iure a doloremque earum? Impedit cum, minima consequuntur voluptatibus sapiente molestiae eum ea quam.</p>
+                    <button class="btn btn-success col-sm-12 col-lg-4">More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 左字右圖 -->
+        <div class="container-fluid" id="dom1dom">
+            <div class="row text-center align-items-center">
+                <div class="col-lg-6 pb-5">
+                    <p class="text-light p-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam autem quisquam consequuntur odit eius, porro corporis iure a doloremque earum? Impedit cum, minima consequuntur voluptatibus sapiente molestiae eum ea quam.</p>
+                    <button class="btn btn-success col-sm-12 col-lg-4">More</button>
+                </div>
+                    <div class="col-lg-6">
+                    <img src="https://source.unsplash.com/random/250x350?sig=2" alt="" class="p-3 rounded-circle imgrl">
+                </div>
+            </div>
+        </div>
+
+            <!-- Google地圖 -->
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115698.27388893634!2d121.3402974986488!3d25.014687265349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90a8d497325%3A0x2876dc1b4d647f9!2z5Lit6I-v5rCR5ZyL57i957Wx5bqc!5e0!3m2!1szh-TW!2stw!4v1541078503234"
+            width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>    
+        </div>
+
+        <!-- 細項連結 -->
+        <div class="container-fluid bg-dark text-white">
+            <div class="row align-items-center p-5">
+                <div class="col-md-3 col-sm-6">
+                    <ul class="list-unstyled text-lg-left text-center">
+                        <li><a href=""></a>Latest Release</li>
+                        <li><a href=""></a>API</li>
+                        <li><a href=""></a>License</li>
+                        <li><a href=""></a>CopyRights</li>
+                        <li><a href=""></a>Subscribe</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <ul class="list-unstyled text-lg-left text-center">
+                        <li><a href=""></a>About</li>
+                        <li><a href=""></a>Ad</li>
+                        <li><a href=""></a>Service</li>
+                        <li><a href=""></a>Works</li>
+                        <li><a href=""></a>Contact us</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <ul class="list-unstyled text-lg-left text-center">
+                        <li><a href=""></a>Graphic</li>
+                        <li><a href=""></a>Web</li>
+                        <li><a href=""></a>3D</li>
+                        <li><a href=""></a>Motion Graphic</li>
+                        <li><a href=""></a>AR / VR</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 text-center">
+                    <a href="#"><img src="https://source.unsplash.com/random/50x50" alt="" class="rounded-circle"></a>
+                    <a href="#"><img src="https://source.unsplash.com/random/50x50" alt="" class="rounded-circle"></a>
+                    <a href="#"><img src="https://source.unsplash.com/random/50x50" alt="" class="rounded-circle"></a>
+                    <a href="#"><img src="https://source.unsplash.com/random/50x50" alt="" class="rounded-circle"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 最底部 -->
+        <div class="container-fluid bg-dark text-white">
+            <div class="row text-center ">
+                <div class="col-lg-12">
+                    <p class="m-0 p-3">2018 © All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+    
+     
+       
+        
+        
+       
+    
+        
