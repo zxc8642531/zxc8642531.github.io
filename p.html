@@ -18,12 +18,20 @@
         }
 
 
-        #dom1dom{
+        .dom1dom{
             background-attachment: fixed;
             background-image: url(rain-nature-animated-gif-19.gif);
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
         }
+
+        .dom1dombar{
+            background-image: radial-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.836),rgb(0, 0, 0));
+            border-radius: 150px;
+        }
+
+        
 
         body::-webkit-scrollbar{
             display: none;
@@ -49,6 +57,8 @@
             display: none;
             font-family: "微軟正黑體";
         }
+
+
 
         #top:active{
             
@@ -192,14 +202,14 @@
         </div>
 
         <!-- 註冊列 -->
-        <div class="container-fluid bg-dark text-white border border-outset border border-white">
-            <div class="row align-items-center">
+        <div class="container-fluid bg-dark text-white dom1dom">
+            <div class="row align-items-center dom1dombar">
                 <div class="col-lg-8 col-sm-12">
                     <p class="m-0 p-5">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptate architecto eveniet minima animi explicabo incidunt blanditiis voluptatum, unde placeat ex sed totam dolores distinctio error sit nemo nisi doloremque. 
                     </p>
                 </div>
-                <div class="col-lg-4 col-sm-12 text-center ">
+                <div class="col-lg-4 col-sm-12 text-center">
                    <div class="col-lg-6 mx-auto py-3">
                        <div class="row">
                             <button class="btn btn-primary col-sm-10 mx-auto">SIGN UP</button>
@@ -210,7 +220,7 @@
         </div>
 
         <!-- 左圖右字 -->
-        <div class="container-fluid" id="dom1dom">
+        <div class="container-fluid dom1dom">
             <div class="row text-center align-items-center py-5">
                 <div class="col-lg-6">
                     <img src="https://source.unsplash.com/random/250x350?sig=2" alt="" class="p-2 rounded-circle imgrl">
@@ -223,7 +233,7 @@
         </div>
 
         <!-- 左字右圖 -->
-        <div class="container-fluid" id="dom1dom">
+        <div class="container-fluid dom1dom">
             <div class="row text-center align-items-center py-5">
                 <div class="col-lg-6 pb-5">
                     <p class="text-light p-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam autem quisquam consequuntur odit eius, porro corporis iure a doloremque earum? Impedit cum, minima consequuntur voluptatibus sapiente molestiae eum ea quam.</p>
